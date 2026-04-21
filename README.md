@@ -29,11 +29,3 @@ Run Instructions
    python3 src/generate_data.py
    python3 src/preprocess.py
    python3 src/analysis_and_model.py
-
-Generated Outputs
-- data/raw/loans_raw.csv
-- data/processed/loan_features.csv
-- data/processed/risk_scored_loans.csv
-- data/processed/kpi_summary.csv
-- data/processed/segment_default_rates.csv
-- reports/model_metrics.txt
