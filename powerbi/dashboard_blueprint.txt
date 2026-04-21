@@ -1,0 +1,38 @@
+POWER BI DASHBOARD BLUEPRINT
+
+Import Tables
+- data/processed/loan_features.csv
+- data/processed/risk_scored_loans.csv
+- data/processed/kpi_summary.csv
+- data/processed/segment_default_rates.csv
+
+Relationship
+- loan_features[loan_id] to risk_scored_loans[loan_id] (1:1)
+
+Suggested DAX Measures
+Total Loans = COUNTROWS(loan_features)
+Total Defaults = SUM(loan_features[default_flag])
+Default Rate = DIVIDE([Total Defaults], [Total Loans], 0)
+Average Loan Amount = AVERAGE(loan_features[loan_amount])
+Average Interest Rate = AVERAGE(loan_features[interest_rate])
+Average Predicted PD = AVERAGE(risk_scored_loans[pred_default_probability])
+
+Report Pages
+1) Portfolio Overview
+   - KPI cards: total loans, defaults, default rate, avg loan amount
+   - Donut: loans by grade
+   - Bar: default rate by state
+
+2) Segment Risk
+   - Matrix: grade x purpose with default rate
+   - Bar: default rate by income_band
+   - Treemap: loan exposure by purpose
+
+3) Trend Analysis
+   - Monthly loans by issue_month
+   - Monthly default rate trend
+   - Slicers: grade, purpose, state, income_band
+
+4) Model Insights
+   - Distribution of pred_default_probability
+   - Actual default rate by risk_band

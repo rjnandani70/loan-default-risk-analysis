@@ -1,0 +1,21 @@
+BUSINESS RECOMMENDATIONS
+
+1) Tighten approvals for high-risk segments
+- Add stricter underwriting checks where loan_to_income_ratio is high.
+- Require extra verification for weaker credit profiles.
+
+2) Use risk-based pricing
+- Tie pricing tiers to predicted default probability.
+- Limit exposure for high-risk purpose categories.
+
+3) Improve monitoring cadence
+- Track monthly default rate and high-risk population share.
+- Trigger portfolio review if default rate breaches threshold.
+
+4) Prioritize collections by risk score
+- Focus collections outreach on high-risk active accounts.
+- Create preventive campaigns for medium-risk segments.
+
+5) Establish model governance
+- Re-train quarterly.
+- Monitor AUC and calibration by risk band.

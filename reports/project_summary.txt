@@ -1,0 +1,17 @@
+PROJECT SUMMARY
+
+Business Problem
+Lenders need a practical framework to quantify default risk and monitor risky loan segments.
+
+Approach
+1) Generate realistic synthetic loan data.
+2) Clean and prepare data with engineered risk features.
+3) Build a baseline classification model for default risk.
+4) Deliver scored outputs and KPI tables for analytics tools.
+
+Key Deliverables
+- loan_features.csv: clean analytical base table
+- risk_scored_loans.csv: predicted default probability and risk band
+- kpi_summary.csv: portfolio-level KPIs
+- segment_default_rates.csv: segment-level risk analysis
+- model_metrics.txt: model performance summary

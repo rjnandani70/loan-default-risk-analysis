@@ -1,0 +1,33 @@
+EXCEL DATA QUALITY CHECKLIST
+
+Input file:
+- data/processed/loan_features.csv
+
+Create workbook sheets:
+1) Data_Quality
+   - Check Name
+   - Formula/Method
+   - Result
+   - Status (Pass/Fail)
+   - Notes
+
+Recommended checks:
+- Total row count
+- Duplicate loan_id count
+- Missing values in annual_income, loan_amount, credit_score, default_flag
+- Value ranges:
+  interest_rate in [0,1]
+  dti_ratio in [0,1]
+  credit_score in [300,900]
+
+2) Pivot_Default_By_Grade
+- Rows: grade
+- Values: average default_flag, count loan_id
+
+3) Pivot_Default_By_Purpose
+- Rows: purpose
+- Values: average default_flag, count loan_id
+
+4) Pivot_Default_By_Income_Band
+- Rows: income_band
+- Values: average default_flag, count loan_id
